@@ -32,7 +32,6 @@ body {
 label,
 select,
 .result-area,
-.hashtag-box
 .copy-button {
   margin-bottom: 10px;
   width: 100%; /* Ensures full width on smaller screens */
@@ -79,7 +78,7 @@ select {
 
 .hashtag-box textarea {
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   border: none;
   background-color: transparent;
   resize: vertical; /* Allow vertical resizing */
