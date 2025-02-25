@@ -74,14 +74,35 @@ select {
   margin: 10px 0;
   border-radius: 5px;
   background-color: #f9f9f9;
+  min-height: 150px;
 }
 
-.hashtag-box textarea {
-  width: 100%;
-  min-height: 150px;
-  border: none;
-  background-color: transparent;
-  resize: vertical; /* Allow vertical resizing */
+#hashtagDisplay {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 5px;
+}
+
+#hashtagDisplay span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+#hashtagDisplay span.selected {
+  background-color: #e0e0e0;
+  border: 1px solid #bbb;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex; /* THIS IS THE MOST IMPORTANT LINE */
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 15px;	
 }
 
 .copy-button {
