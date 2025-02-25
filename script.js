@@ -14,36 +14,73 @@ const hashtags = {
 const themeSelect = document.getElementById('theme');
 const resultDiv = document.getElementById('result');
 const copyButton = document.getElementById('copyButton');
+const copySelectedButton = document.getElementById('copySelectedButton');
+const hashtagDisplay = document.getElementById('hashtagDisplay');
+
+// Initial state
+hashtagDisplay.innerHTML = '';
+copyButton.style.display = 'none';
+copySelectedButton.style.display = 'none';
 
 themeSelect.addEventListener('change', () => {
   const selectedTheme = themeSelect.value;
   let hashtagString = hashtags[selectedTheme] || '';
   const hashtagArray = hashtagString.split(' ');
 
-  resultDiv.innerHTML = '';
-
-  hashtagArray.forEach(hashtag => {
-    const paragraph = document.createElement('p');
-    paragraph.textContent = hashtag;
-    resultDiv.appendChild(paragraph);
-  });
+  // Clear existing hashtags before adding new ones
+  hashtagDisplay.innerHTML = '';
 
   if (hashtagString) {
+    hashtagArray.forEach(hashtag => {
+      const span = document.createElement('span');
+      span.textContent = hashtag;
+      span.addEventListener('click', () => {
+        span.classList.toggle('selected');
+      });
+      hashtagDisplay.appendChild(span);
+    });
+
     copyButton.style.display = 'block';
+    copySelectedButton.style.display = 'block';
   } else {
     copyButton.style.display = 'none';
+    copySelectedButton.style.display = 'none';
   }
 });
 
 copyButton.addEventListener('click', () => {
   const selectedTheme = themeSelect.value;
   let textToCopy = hashtags[selectedTheme] || '';
-  textToCopy = textToCopy.replace(/\s+/g, ' '); // Replace multiple spaces with single space
+  textToCopy = textToCopy.replace(/\s+/g, ' ');
 
   navigator.clipboard.writeText(textToCopy).then(() => {
-    alert('Hashtags copied to clipboard!');
+    const originalText = copyButton.textContent;
+    copyButton.textContent = 'Copied!';
+    setTimeout(() => {
+      copyButton.textContent = originalText;
+    }, 2000);
   }).catch(err => {
     console.error('Could not copy text: ', err);
-    alert('Could not copy text.');
+    alert('Failed to copy hashtags. Please try again.');
   });
+});
+
+copySelectedButton.addEventListener('click', () => {
+  const selectedHashtags = Array.from(hashtagDisplay.querySelectorAll('span.selected'));
+  const selectedText = selectedHashtags.map(span => span.textContent).join(' ');
+
+  if (selectedText) {
+    navigator.clipboard.writeText(selectedText).then(() => {
+      const originalText = copySelectedButton.textContent;
+      copySelectedButton.textContent = 'Copied!';
+      setTimeout(() => {
+        copySelectedButton.textContent = originalText;
+      }, 2000);
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+      alert('Failed to copy selected hashtags. Please try again.');
+    });
+  } else {
+    alert('Please select hashtags to copy.');
+  }
 });
