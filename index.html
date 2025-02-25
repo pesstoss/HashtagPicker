@@ -9,8 +9,7 @@
 <h1>HASHTAG PICKER</h1>
 <div>
 <label for="theme">Choose theme:</label>
-<select name="theme" id="theme">
-<option value="empty"></option>  
+<select name="theme" id="theme">  
 <option value="general">General</option>
 <option value="spec1">Specific 1</option>
 <option value="spec2">Specific 2</option>
@@ -23,7 +22,9 @@
 <option value="human">Humanity</option>
 </select>
 </div>
-<div id="result"></div>
+<div id="result" class="hashtag-box">
+<textarea readonly id="hashtagDisplay"></textarea>
+</div>
 <button id="copyButton" style="display: none;">Copy to Clipboard</button>
 <script src="script.js">
 </script>
