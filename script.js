@@ -34,11 +34,7 @@ const doneButton = document.getElementById('doneButton');
 
 function resetDisplays() {
     hashtagDisplay.innerHTML = '';
-    transferSelectedButton.style.display = 'none';
-    transferAllButton.style.display = 'none';
 }
-
-resetDisplays();
 
 themeSelect.addEventListener('change', () => {
     const selectedTheme = themeSelect.value;
@@ -62,6 +58,9 @@ themeSelect.addEventListener('change', () => {
 
         transferSelectedButton.style.display = 'block';
         transferAllButton.style.display = 'block';
+    } else {
+        transferSelectedButton.style.display = 'none';
+        transferAllButton.style.display = 'none';
     }
 });
 
@@ -99,7 +98,5 @@ function transferAll() {
     const allHashtags = Array.from(hashtagDisplay.querySelectorAll('span'));
     allHashtags.forEach(span => {
         clipboardDisplay.appendChild(span);
-        span.classList.remove('selected');
-        span.removeEventListener('click', toggleSelected);
-        span.removeEventListener('touchstart
-                                 
+        span.classList.
+            
