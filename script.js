@@ -75,8 +75,8 @@ function transferSelected() {
     selectedHashtags.forEach(span => {
         clipboardDisplay.appendChild(span);
         span.classList.remove('selected');
-        span.removeEventListener('click', toggleClipboardSelected);
-        span.removeEventListener('touchstart', toggleClipboardSelected);
+        span.removeEventListener('click', toggleSelected);
+        span.removeEventListener('touchstart', toggleSelected);
         span.addEventListener('click', toggleClipboardSelected);
         span.addEventListener('touchstart', toggleClipboardSelected);
     });
@@ -84,17 +84,15 @@ function transferSelected() {
     doneButton.style.display = 'block';
 }
 
-transferAllButton.addEventListener('click', transferAll);
-transferAllButton.addEventListener('touchstart', transferAll);
+transferSelectedButton.addEventListener('click', transferSelected);
+transferSelectedButton.addEventListener('touchstart', transferSelected);
 
 function transferAll() {
     const allHashtags = Array.from(hashtagDisplay.querySelectorAll('span'));
     allHashtags.forEach(span => {
         clipboardDisplay.appendChild(span);
         span.classList.remove('selected');
-        span.removeEventListener('click', toggleClipboardSelected);
-        span.removeEventListener('touchstart', toggleClipboardSelected);
-        span.addEventListener('click', toggleClipboardSelected);
-        span.addEventListener('touchstart', toggleClipboardSelected);
-    });
-    
+        span.removeEventListener('click', toggleSelected);
+        span.removeEventListener('touchstart', toggleSelected);
+        span.
+            
