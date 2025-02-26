@@ -32,7 +32,7 @@ h1 {
     border-radius: 5px;
     background-color: #f9f9f9;
     min-height: 150px;
-    width: 95%; /* Adjust width for mobile */
+    width: 95%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -40,7 +40,7 @@ h1 {
 
 @media (min-width: 768px) {
     .hashtag-box {
-        width: 48%; /* Adjust width for larger screens */
+        width: 48%;
     }
 }
 
@@ -93,7 +93,7 @@ h1 {
 .copy-button, button {
     padding: 10px 15px;
     font-size: 16px;
-    flex-grow: 1; /* Allow buttons to take equal space */
+    flex-grow: 1;
 }
 
 .copy-button:hover, button:hover {
