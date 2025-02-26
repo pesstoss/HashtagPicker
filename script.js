@@ -143,10 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
             navigator.clipboard.writeText(clipboardText).then(() => {
                 const originalText = doneButton.textContent;
                 doneButton.textContent = 'Copied!';
-                setTimeout(() => {
-                    doneButton.textContent = originalText;
-                }, 2000);
-            }).catch(err => {
-                console.error('Could not copy text: ', err);
-                alert('Failed to copy
-                      
+                setTimeout
+                
