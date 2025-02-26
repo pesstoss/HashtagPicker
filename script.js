@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() 
     const hashtags = {
         general: ["#bokehbros", "#shuttersisters", "#podium", "#pictas", "#rebels_united", "#bpa_arts", "#fotomasters", "#elitepix", "#picplanet", "#exquisitepics20", "#hey_ihadtosnapthat2"],
         spec1: ["#snap_abstract", "#snap_surreal", "#snap_communityarts", "#snap_artgallery", "#pictasart", "#snap_textures", "#snap_minimal", "#snap_potd", "#snap_longexposure", "#snap_depthoffield", "#snap_nightshots", "#podium_night"],
