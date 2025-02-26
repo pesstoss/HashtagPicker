@@ -45,32 +45,31 @@ h1 {
 }
 
 #hashtagDisplay, #clipboardDisplay {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Increased minmax */
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow wrapping */
     gap: 5px;
     flex-grow: 1;
     overflow-y: auto;
-    align-content: start;
     padding: 5px;
 }
 
 #hashtagDisplay span, #clipboardDisplay span {
     display: inline-block;
-    padding: 8px 12px; /* Adjusted padding */
+    padding: 8px 12px;
     margin: 0;
     border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
     box-sizing: border-box;
-    white-space: nowrap; /* Keep hashtags on a single line */
+    white-space: nowrap;
     background-color: #fff;
 }
 
 #hashtagDisplay span.selected, #clipboardDisplay span.selected {
     background-color: #e0e0e0;
     border: 1px solid #bbb;
-    padding: 7px 11px; /* Adjusted padding */
+    padding: 7px 11px;
 }
 
 .button-container {
