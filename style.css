@@ -46,11 +46,11 @@ h1 {
 
 #hashtagDisplay, #clipboardDisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted minmax */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 5px;
     flex-grow: 1;
     overflow-y: auto;
-    align-content: start; /* add this line */
+    align-content: start;
 }
 
 #hashtagDisplay span, #clipboardDisplay span {
@@ -60,7 +60,8 @@ h1 {
     border: 1px solid transparent;
     cursor: pointer;
     text-align: center;
-    box-sizing: border-box; /* add this line */
+    box-sizing: border-box;
+    word-break: break-word; /* Add this line */
 }
 
 #hashtagDisplay span.selected, #clipboardDisplay span.selected {
