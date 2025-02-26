@@ -1,117 +1,79 @@
 body {
-  font-family: 'Helvetica New', sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  margin: 20px 0; 
-  box-sizing: border-box; 
+    font-family: 'Helvetica New', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px 0;
+    box-sizing: border-box;
 }
 
-.h1 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-  width: 100%; 
-  max-width: 400px; 
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
-.container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; 
-  max-width: 400px; 
-  box-sizing: border-box;
-}
-
-.theme-select,
-label,
-select,
-.result-area,
-.copy-button {
-  margin-bottom: 10px;
-  width: 100%; 
-  box-sizing: border-box; 
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.result-area {
-  padding: 15px;
-  border: 1px solid #eee;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  white-space: normal;
-  min-height: 100px;
-  margin-top: 0;
-  margin-left: 10px;
-}
-
-.result-area p {
-  margin: 5px 0;
-  color: #333;
+.hashtag-container {
+    display: flex;
+    width: 100%;
+    max-width: 850px;
+    justify-content: space-between;
 }
 
 .hashtag-box {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  min-height: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-height: 150px;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
 }
 
-#hashtagDisplay {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 5px;
+#hashtagDisplay, #clipboardDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+    flex-grow: 1; /* Allow hashtags to grow and fill available space */
+    overflow-y: auto; /* Add scroll if content exceeds box height */
 }
 
-#hashtagDisplay span {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 0;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-align: center;
+#hashtagDisplay span, #clipboardDisplay span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
 }
 
-#hashtagDisplay span.selected {
-  background-color: #e0e0e0;
-  border: 1px solid #bbb;
+#hashtagDisplay span.selected, #clipboardDisplay span.selected {
+    background-color: #e0e0e0;
+    border: 1px solid #bbb;
 }
 
 .button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  gap: 15px;	
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 15px;
 }
 
-.copy-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.copy-button, button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.copy-button:hover {
-  background-color: #0056b3;
+.copy-button:hover, button:hover {
+    background-color: #0056b3;
 }
