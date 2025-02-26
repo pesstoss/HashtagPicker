@@ -98,5 +98,5 @@ document.addEventListener('DOMContentLoaded', function() {
     transferAllButton.addEventListener('touchstart', transferAll);
 
     function transferAll() {
-        const allHashtagsSpans = Array.from(hashtagDisplay
-                                            
+        const allHashtagsSpans =
+            
