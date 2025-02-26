@@ -93,5 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         doneButton.style.display = 'block';
     }
 
-    transferAllButton.addEventListener('click', transferAll
-                                       
+    transferAllButton.addEventListener('click', transferAll);
+    transfer
+    
