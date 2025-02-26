@@ -46,31 +46,31 @@ h1 {
 
 #hashtagDisplay, #clipboardDisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 8px; /* Increased gap for spacing */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Increased minmax */
+    gap: 5px;
     flex-grow: 1;
     overflow-y: auto;
     align-content: start;
-    padding: 8px; /* Increased padding to match gap */
+    padding: 5px;
 }
 
 #hashtagDisplay span, #clipboardDisplay span {
     display: inline-block;
-    padding: 6px 10px; /* Adjusted padding */
+    padding: 8px 12px; /* Adjusted padding */
     margin: 0;
-    border: 1px solid #ddd; /* Added a light border as a frame */
-    border-radius: 3px; /* Rounded corners for the frame */
+    border: 1px solid #ddd;
+    border-radius: 4px;
     cursor: pointer;
     text-align: center;
     box-sizing: border-box;
-    word-break: break-word;
-    background-color: #fff; /* Added a white background for contrast */
+    white-space: nowrap; /* Keep hashtags on a single line */
+    background-color: #fff;
 }
 
 #hashtagDisplay span.selected, #clipboardDisplay span.selected {
     background-color: #e0e0e0;
     border: 1px solid #bbb;
-    padding: 5px 9px; /* Adjusted padding to compensate for border */
+    padding: 7px 11px; /* Adjusted padding */
 }
 
 .button-container {
