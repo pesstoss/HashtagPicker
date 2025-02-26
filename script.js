@@ -29,6 +29,59 @@ themeSelect.addEventListener('change', () => {
         const hashtagArray = hashtags[selectedTheme].split(' ');
         hashtagArray.forEach(hashtag => {
             const span = document.createElement('span');
+            let displayHashtag = hashtag; // Initialize with original hashtag
+
+            if (window.innerWidth <= 768) {
+                // Split hashtags for mobile only
+                displayHashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
+            }
+
+            span.textContent = displayHashtag; // Use the modified or original hashtag
+            span.addEventListener('click', () => {
+                span.classList.toggle('selected');
+            });
+            hashtagDisplay.appendChild(span);
+        });
+
+        transferSelectedButton.style.display = 'block';
+        transferAllButton.style.display = 'block';
+    }
+});
+
+// ... (Rest of your JavaScript code)
+
+
+const hashtags = {
+    // ... (Your hashtag data)
+};
+
+const themeSelect = document.getElementById('theme');
+const hashtagDisplay = document.getElementById('hashtagDisplay');
+const clipboardDisplay = document.getElementById('clipboardDisplay');
+const transferSelectedButton = document.getElementById('transferSelectedButton');
+const transferAllButton = document.getElementById('transferAllButton');
+const modifyButton = document.getElementById('modifyButton');
+const doneButton = document.getElementById('doneButton');
+
+function resetDisplays() {
+    hashtagDisplay.innerHTML = '';
+    clipboardDisplay.innerHTML = '';
+    transferSelectedButton.style.display = 'none';
+    transferAllButton.style.display = 'none';
+    modifyButton.style.display = 'none';
+    doneButton.style.display = 'none';
+}
+
+resetDisplays();
+
+themeSelect.addEventListener('change', () => {
+    const selectedTheme = themeSelect.value;
+    resetDisplays();
+
+    if (hashtags[selectedTheme]) {
+        const hashtagArray = hashtags[selectedTheme].split(' ');
+        hashtagArray.forEach(hashtag => {
+            const span = document.createElement('span');
             if (window.innerWidth <= 768) {
                 // Split hashtags for mobile
                 hashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
