@@ -97,6 +97,5 @@ transferAllButton.addEventListener('touchstart', transferAll);
 function transferAll() {
     const allHashtags = Array.from(hashtagDisplay.querySelectorAll('span'));
     allHashtags.forEach(span => {
-        clipboardDisplay.appendChild(span);
-        span.classList.
-            
+        clipboard
+        
