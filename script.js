@@ -137,3 +137,67 @@ function doneClick(){
     }
 }
 doneButton.addEventListener('click', doneClick);
+document.addEventListener('DOMContentLoaded', function() {
+    const themes = {
+        'Theme 1': ['#hashtag1', '#hashtag2', '#hashtag3'],
+        'Theme 2': ['#hashtag4', '#hashtag5', '#hashtag6'],
+        'Theme 3': ['#hashtag7', '#hashtag8', '#hashtag9']
+    };
+
+    const themeSelect = document.getElementById('themeSelect');
+    const hashtagList = document.getElementById('hashtagList');
+    const selectedHashtags = document.getElementById('selectedHashtags');
+    const copyButton = document.getElementById('copyButton');
+
+    let allSelectedHashtags = [];
+
+    // Populate theme dropdown
+    for (const theme in themes) {
+        const option = document.createElement('option');
+        option.value = theme;
+        option.textContent = theme;
+        themeSelect.appendChild(option);
+    }
+
+    // Update hashtag list on theme selection
+    themeSelect.addEventListener('change', function() {
+        const selectedTheme = themeSelect.value;
+        hashtagList.innerHTML = ''; // Clear previous hashtags
+
+        if (selectedTheme) {
+            themes[selectedTheme].forEach(hashtag => {
+                const button = document.createElement('button');
+                button.textContent = hashtag;
+                button.addEventListener('click', function() {
+                    if (!allSelectedHashtags.includes(hashtag)) {
+                        allSelectedHashtags.push(hashtag);
+                        updateSelectedHashtagsDisplay();
+                    }
+                });
+                hashtagList.appendChild(button);
+            });
+        }
+    });
+
+    // Update selected hashtags display
+    function updateSelectedHashtagsDisplay() {
+        selectedHashtags.textContent = allSelectedHashtags.join(' ');
+    }
+
+    // Copy selected hashtags to clipboard
+    copyButton.addEventListener('click', function() {
+        if (allSelectedHashtags.length > 0) {
+            navigator.clipboard.writeText(allSelectedHashtags.join(' '))
+                .then(() => {
+                    alert('Hashtags copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                    alert('Failed to copy hashtags.');
+                });
+        } else {
+            alert('No hashtags selected.');
+        }
+    });
+});
+
