@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VERO Hashtags</title>
+    <title>HASHTAG PICKER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>The #s of VERO</h1>
+    <h1>HASHTAG PICKER</h1>
     <div>
-        <label for="theme">Select a Theme:</label>
-        <select id="theme">
+        <label for="theme">Choose theme:</label>
+        <select name="theme" id="theme">
             <option value="empty"></option>
             <option value="general">General</option>
             <option value="spec1">Specific 1</option>
@@ -25,7 +25,7 @@
     </div>
     <div class="hashtag-container">
         <div class="hashtag-box">
-            <div id="hashtagDisplay"></div>
+            <div id="result"></div>
             <div class="button-container">
                 <button id="transferSelectedButton">Transfer</button>
                 <button id="transferAllButton">Transfer All</button>
@@ -35,7 +35,7 @@
             <div id="clipboardDisplay"></div>
             <div class="button-container">
                 <button id="modifyButton">Modify</button>
-                <button id="doneButton">Done!</button>
+                <button id="copyButton">Copy to Clipboard</button>
             </div>
         </div>
     </div>
