@@ -101,4 +101,5 @@ function transferAll() {
         clipboardDisplay.appendChild(span);
         span.classList.remove('selected');
         span.removeEventListener('click', toggleSelected);
-        
+        span.removeEventListener('touchstart
+                                 
