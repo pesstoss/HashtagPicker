@@ -19,7 +19,7 @@ h1 {
 
 .hashtag-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
     width: 100%;
     max-width: 850px;
     justify-content: space-between;
@@ -32,25 +32,25 @@ h1 {
     border-radius: 5px;
     background-color: #f9f9f9;
     min-height: 150px;
-    width: 48%; /* Default width for desktop */
+    width: 48%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
 
-/* Adjust for smaller screens (mobile) */
 @media (max-width: 768px) {
     .hashtag-box {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
     }
 }
 
 #hashtagDisplay, #clipboardDisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted minmax */
     gap: 5px;
     flex-grow: 1;
     overflow-y: auto;
+    align-content: start; /* add this line */
 }
 
 #hashtagDisplay span, #clipboardDisplay span {
@@ -60,6 +60,7 @@ h1 {
     border: 1px solid transparent;
     cursor: pointer;
     text-align: center;
+    box-sizing: border-box; /* add this line */
 }
 
 #hashtagDisplay span.selected, #clipboardDisplay span.selected {
