@@ -19,10 +19,10 @@ h1 {
 
 .hashtag-container {
     display: flex;
-    justify-content: center; /* Center the boxes */
+    justify-content: center;
     width: 100%;
     max-width: 850px;
-    flex-wrap: wrap; /* Keep flex-wrap for mobile */
+    flex-wrap: wrap;
 }
 
 .hashtag-box {
@@ -40,13 +40,10 @@ h1 {
 
 @media (max-width: 320px) {
     .hashtag-box {
-        padding: 5px; /* Reduce padding on very small screens */
+        padding: 5px;
     }
     #hashtagDisplay span, #clipboardDisplay span {
-        font-size: 14px; /* Reduce font size on very small screens */
-    }
-}
-
+        font-size: 14px;
     }
 }
 
@@ -56,7 +53,6 @@ h1 {
     margin: 2px;
     font-size: 16px;
 }
-
 
 #hashtagDisplay span, #clipboardDisplay span {
     display: inline-flex;
