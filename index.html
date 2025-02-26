@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VERO Hashtags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The #s of VERO</h1>
+    <div>
+        <label for="theme">Select a Theme:</label>
+        <select id="theme">
+            <option value="empty"></option>
+            <option value="general">General</option>
+            <option value="spec1">Specific 1</option>
+            <option value="spec2">Specific 2</option>
+            <option value="vspec">Very specific</option>
+            <option value="bnw">B&W</option>
+            <option value="city">City/Architecture</option>
+            <option value="world">World</option>
+            <option value="nature1">Nature 1</option>
+            <option value="nature2">Nature 2</option>
+            <option value="human">Humanity</option>
+        </select>
+    </div>
+    <div class="hashtag-container">
+        <div class="hashtag-box">
+            <div id="hashtagDisplay"></div>
+            <div class="button-container">
+                <button id="transferSelectedButton">Transfer</button>
+                <button id="transferAllButton">Transfer All</button>
+            </div>
+        </div>
+        <div class="hashtag-box">
+            <div id="clipboardDisplay"></div>
+            <div class="button-container">
+                <button id="modifyButton">Modify</button>
+                <button id="doneButton">Done!</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
