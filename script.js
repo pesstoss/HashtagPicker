@@ -58,17 +58,17 @@ themeSelect.addEventListener('change', () => {
             hashtagDisplay.appendChild(span);
             span.addEventListener('click', toggleSelected);
             span.addEventListener('touchstart', toggleSelected);
-
-            function toggleSelected(event) {
-                event.preventDefault();
-                span.classList.toggle('selected');
-            }
         });
 
         transferSelectedButton.style.display = 'block';
         transferAllButton.style.display = 'block';
     }
 });
+
+function toggleSelected(event) {
+    event.preventDefault();
+    this.classList.toggle('selected');
+}
 
 function transferSelected() {
     const selectedHashtags = Array.from(hashtagDisplay.querySelectorAll('span.selected'));
@@ -84,9 +84,6 @@ function transferSelected() {
     doneButton.style.display = 'block';
 }
 
-transferSelectedButton.addEventListener('click', transferSelected);
-transferSelectedButton.addEventListener('touchstart', transferSelected);
-
 function transferAll() {
     const allHashtags = Array.from(hashtagDisplay.querySelectorAll('span'));
     allHashtags.forEach(span => {
@@ -94,5 +91,8 @@ function transferAll() {
         span.classList.remove('selected');
         span.removeEventListener('click', toggleSelected);
         span.removeEventListener('touchstart', toggleSelected);
-        span.
-            
+        span.addEventListener('click', toggleClipboardSelected);
+        span.addEventListener('touchstart', toggleClipboardSelected);
+    });
+    modifyButton.style.display =
+        
