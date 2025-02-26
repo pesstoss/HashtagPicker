@@ -70,6 +70,11 @@ function toggleSelected(event) {
     this.classList.toggle('selected');
 }
 
+function toggleClipboardSelected(event) {
+    event.preventDefault();
+    this.classList.toggle('selected');
+}
+
 function transferSelected() {
     const selectedHashtags = Array.from(hashtagDisplay.querySelectorAll('span.selected'));
     selectedHashtags.forEach(span => {
@@ -94,5 +99,5 @@ function transferAll() {
         span.addEventListener('click', toggleClipboardSelected);
         span.addEventListener('touchstart', toggleClipboardSelected);
     });
-    modifyButton.style.display =
+    modifyButton.
         
