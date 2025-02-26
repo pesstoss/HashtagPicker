@@ -1,4 +1,52 @@
 const hashtags = {
+    // ... (Your hashtag data)
+};
+
+const themeSelect = document.getElementById('theme');
+const hashtagDisplay = document.getElementById('hashtagDisplay');
+const clipboardDisplay = document.getElementById('clipboardDisplay');
+const transferSelectedButton = document.getElementById('transferSelectedButton');
+const transferAllButton = document.getElementById('transferAllButton');
+const modifyButton = document.getElementById('modifyButton');
+const doneButton = document.getElementById('doneButton');
+
+function resetDisplays() {
+    hashtagDisplay.innerHTML = '';
+    clipboardDisplay.innerHTML = '';
+    transferSelectedButton.style.display = 'none';
+    transferAllButton.style.display = 'none';
+    modifyButton.style.display = 'none';
+    doneButton.style.display = 'none';
+}
+
+resetDisplays();
+
+themeSelect.addEventListener('change', () => {
+    const selectedTheme = themeSelect.value;
+    resetDisplays();
+
+    if (hashtags[selectedTheme]) {
+        const hashtagArray = hashtags[selectedTheme].split(' ');
+        hashtagArray.forEach(hashtag => {
+            const span = document.createElement('span');
+            if (window.innerWidth <= 768) {
+                // Split hashtags for mobile
+                hashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
+            }
+            span.textContent = hashtag;
+            span.addEventListener('click', () => {
+                span.classList.toggle('selected');
+            });
+            hashtagDisplay.appendChild(span);
+        });
+
+        transferSelectedButton.style.display = 'block';
+        transferAllButton.style.display = 'block';
+    }
+});
+
+// ... (Rest of your JavaScript code)
+const hashtags = {
     general: "#bokehbros #shuttersisters #podium #pictas #rebels_united #bpa_arts #fotomasters #elitepix #picplanet #exquisitepics20 #hey_ihadtosnapthat2",
     spec1: "#snap_abstract #snap_surreal #snap_communityarts #snap_artgallery #pictasart #snap_textures #snap_minimal #snap_potd #snap_longexposure #snap_depthoffield #snap_nightshots #podium_night",
     spec2: "#snap_reflection #snap_symmetry #snap_silhouette #snap_cuteness #snap_moody #pictasmoody #snap_mobile #snap_macro #podium_macro #rebel_macro #snap_edit #snap_filmfoto #snap_colours #snap_colorsplash #snap_ai #snap_numbers",
