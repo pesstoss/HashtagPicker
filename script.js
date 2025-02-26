@@ -70,9 +70,6 @@ themeSelect.addEventListener('change', () => {
     }
 });
 
-transferSelectedButton.addEventListener('click', transferSelected);
-transferSelectedButton.addEventListener('touchstart', transferSelected);
-
 function transferSelected() {
     const selectedHashtags = Array.from(hashtagDisplay.querySelectorAll('span.selected'));
     selectedHashtags.forEach(span => {
