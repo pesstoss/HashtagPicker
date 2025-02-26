@@ -98,5 +98,6 @@ function transferAll() {
         span.removeEventListener('click', toggleClipboardSelected);
         span.removeEventListener('touchstart', toggleClipboardSelected);
         span.addEventListener('click', toggleClipboardSelected);
-        span
-        
+        span.addEventListener('touchstart', toggleClipboardSelected);
+    });
+    
