@@ -46,29 +46,31 @@ h1 {
 
 #hashtagDisplay, #clipboardDisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Reduced minmax */
-    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 8px; /* Increased gap for spacing */
     flex-grow: 1;
     overflow-y: auto;
     align-content: start;
-    padding: 5px; /* Added padding to the grid container */
+    padding: 8px; /* Increased padding to match gap */
 }
 
 #hashtagDisplay span, #clipboardDisplay span {
     display: inline-block;
-    padding: 5px 8px; /* Reduced padding */
+    padding: 6px 10px; /* Adjusted padding */
     margin: 0;
-    border: 1px solid transparent;
+    border: 1px solid #ddd; /* Added a light border as a frame */
+    border-radius: 3px; /* Rounded corners for the frame */
     cursor: pointer;
     text-align: center;
     box-sizing: border-box;
     word-break: break-word;
+    background-color: #fff; /* Added a white background for contrast */
 }
 
 #hashtagDisplay span.selected, #clipboardDisplay span.selected {
     background-color: #e0e0e0;
     border: 1px solid #bbb;
-    padding: 4px 7px; /* Reduced padding to compensate for border */
+    padding: 5px 9px; /* Adjusted padding to compensate for border */
 }
 
 .button-container {
