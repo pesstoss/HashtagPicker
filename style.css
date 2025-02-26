@@ -2,19 +2,19 @@ body {
   font-family: 'Helvetica New', sans-serif;
   background-color: #f4f4f4;
   display: flex;
-  flex-direction: column; /* Changed to column layout */
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  margin: 20px 0; /* Add margin to the body itself */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin: 20px 0; 
+  box-sizing: border-box; 
 }
 
 .h1 {
   color: #333;
   text-align: center;
   margin-bottom: 20px;
-  width: 100%; /* Ensures full width on smaller screens */
-  max-width: 400px; /* Limits width on larger screens */
+  width: 100%; 
+  max-width: 400px; 
 }
 
 .container {
@@ -22,10 +22,9 @@ body {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Ensures full width on smaller screens */
-  max-width: 400px; /* Limits width on larger screens */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-  margin-bottom: 20px;
+  width: 100%; 
+  max-width: 400px; 
+  box-sizing: border-box;
 }
 
 .theme-select,
@@ -34,8 +33,8 @@ select,
 .result-area,
 .copy-button {
   margin-bottom: 10px;
-  width: 100%; /* Ensures full width on smaller screens */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 label {
@@ -97,9 +96,8 @@ select {
   border: 1px solid #bbb;
 }
 
-/* Button container styling */
 .button-container {
-  display: flex; /* THIS IS THE MOST IMPORTANT LINE */
+  display: flex;
   justify-content: space-between;
   margin-top: 10px;
   gap: 15px;	
