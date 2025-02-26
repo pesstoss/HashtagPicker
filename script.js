@@ -45,10 +45,10 @@ themeSelect.addEventListener('change', () => {
             }
 
             span.textContent = displayHashtag;
+            hashtagDisplay.appendChild(span);
             span.addEventListener('click', () => {
                 span.classList.toggle('selected');
             });
-            hashtagDisplay.appendChild(span);
         });
 
         transferSelectedButton.style.display = 'block';
