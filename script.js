@@ -1,157 +1,4 @@
 const hashtags = {
-    // ... (Your hashtag data)
-};
-
-const themeSelect = document.getElementById('theme');
-const hashtagDisplay = document.getElementById('hashtagDisplay');
-const clipboardDisplay = document.getElementById('clipboardDisplay');
-const transferSelectedButton = document.getElementById('transferSelectedButton');
-const transferAllButton = document.getElementById('transferAllButton');
-const modifyButton = document.getElementById('modifyButton');
-const doneButton = document.getElementById('doneButton');
-
-function resetDisplays() {
-    hashtagDisplay.innerHTML = '';
-    clipboardDisplay.innerHTML = '';
-    transferSelectedButton.style.display = 'none';
-    transferAllButton.style.display = 'none';
-    modifyButton.style.display = 'none';
-    doneButton.style.display = 'none';
-}
-
-resetDisplays();
-
-themeSelect.addEventListener('change', () => {
-    const selectedTheme = themeSelect.value;
-    resetDisplays();
-
-    if (hashtags[selectedTheme]) {
-        const hashtagArray = hashtags[selectedTheme].split(' ');
-        hashtagArray.forEach(hashtag => {
-            const span = document.createElement('span');
-            let displayHashtag = hashtag;
-
-            if (window.innerWidth <= 768) {
-                displayHashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
-            }
-
-            span.textContent = displayHashtag;
-            hashtagDisplay.appendChild(span);
-            span.addEventListener('click', () => {
-                span.classList.toggle('selected');
-            });
-        });
-
-        transferSelectedButton.style.display = 'block';
-        transferAllButton.style.display = 'block';
-    }
-});
-
-// ... (Rest of your JavaScript code)
-
-
-const hashtags = {
-    // ... (Your hashtag data)
-};
-
-const themeSelect = document.getElementById('theme');
-const hashtagDisplay = document.getElementById('hashtagDisplay');
-const clipboardDisplay = document.getElementById('clipboardDisplay');
-const transferSelectedButton = document.getElementById('transferSelectedButton');
-const transferAllButton = document.getElementById('transferAllButton');
-const modifyButton = document.getElementById('modifyButton');
-const doneButton = document.getElementById('doneButton');
-
-function resetDisplays() {
-    hashtagDisplay.innerHTML = '';
-    clipboardDisplay.innerHTML = '';
-    transferSelectedButton.style.display = 'none';
-    transferAllButton.style.display = 'none';
-    modifyButton.style.display = 'none';
-    doneButton.style.display = 'none';
-}
-
-resetDisplays();
-
-themeSelect.addEventListener('change', () => {
-    const selectedTheme = themeSelect.value;
-    resetDisplays();
-
-    if (hashtags[selectedTheme]) {
-        const hashtagArray = hashtags[selectedTheme].split(' ');
-        hashtagArray.forEach(hashtag => {
-            const span = document.createElement('span');
-            let displayHashtag = hashtag; // Initialize with original hashtag
-
-            if (window.innerWidth <= 768) {
-                // Split hashtags for mobile only
-                displayHashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
-            }
-
-            span.textContent = displayHashtag; // Use the modified or original hashtag
-            span.addEventListener('click', () => {
-                span.classList.toggle('selected');
-            });
-            hashtagDisplay.appendChild(span);
-        });
-
-        transferSelectedButton.style.display = 'block';
-        transferAllButton.style.display = 'block';
-    }
-});
-
-// ... (Rest of your JavaScript code)
-
-
-const hashtags = {
-    // ... (Your hashtag data)
-};
-
-const themeSelect = document.getElementById('theme');
-const hashtagDisplay = document.getElementById('hashtagDisplay');
-const clipboardDisplay = document.getElementById('clipboardDisplay');
-const transferSelectedButton = document.getElementById('transferSelectedButton');
-const transferAllButton = document.getElementById('transferAllButton');
-const modifyButton = document.getElementById('modifyButton');
-const doneButton = document.getElementById('doneButton');
-
-function resetDisplays() {
-    hashtagDisplay.innerHTML = '';
-    clipboardDisplay.innerHTML = '';
-    transferSelectedButton.style.display = 'none';
-    transferAllButton.style.display = 'none';
-    modifyButton.style.display = 'none';
-    doneButton.style.display = 'none';
-}
-
-resetDisplays();
-
-themeSelect.addEventListener('change', () => {
-    const selectedTheme = themeSelect.value;
-    resetDisplays();
-
-    if (hashtags[selectedTheme]) {
-        const hashtagArray = hashtags[selectedTheme].split(' ');
-        hashtagArray.forEach(hashtag => {
-            const span = document.createElement('span');
-            if (window.innerWidth <= 768) {
-                // Split hashtags for mobile
-                hashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
-            }
-            span.textContent = hashtag;
-            span.addEventListener('click', () => {
-                span.classList.toggle('selected');
-            });
-            hashtagDisplay.appendChild(span);
-        });
-
-        transferSelectedButton.style.display = 'block';
-        transferAllButton.style.display = 'block';
-    }
-});
-
-// ... (Rest of your JavaScript code)
-const hashtags = {
     general: "#bokehbros #shuttersisters #podium #pictas #rebels_united #bpa_arts #fotomasters #elitepix #picplanet #exquisitepics20 #hey_ihadtosnapthat2",
     spec1: "#snap_abstract #snap_surreal #snap_communityarts #snap_artgallery #pictasart #snap_textures #snap_minimal #snap_potd #snap_longexposure #snap_depthoffield #snap_nightshots #podium_night",
     spec2: "#snap_reflection #snap_symmetry #snap_silhouette #snap_cuteness #snap_moody #pictasmoody #snap_mobile #snap_macro #podium_macro #rebel_macro #snap_edit #snap_filmfoto #snap_colours #snap_colorsplash #snap_ai #snap_numbers",
@@ -191,7 +38,13 @@ themeSelect.addEventListener('change', () => {
         const hashtagArray = hashtags[selectedTheme].split(' ');
         hashtagArray.forEach(hashtag => {
             const span = document.createElement('span');
-            span.textContent = hashtag;
+            let displayHashtag = hashtag;
+
+            if (window.innerWidth <= 768) {
+                displayHashtag = hashtag.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
+            }
+
+            span.textContent = displayHashtag;
             span.addEventListener('click', () => {
                 span.classList.toggle('selected');
             });
@@ -232,7 +85,6 @@ transferAllButton.addEventListener('click', () => {
 });
 
 modifyButton.addEventListener('click', () => {
-    // Modify button now allows selection and deletion
     const clipboardSpans = Array.from(clipboardDisplay.querySelectorAll('span'));
     clipboardSpans.forEach(span => {
         span.addEventListener('click', () => {
@@ -240,7 +92,6 @@ modifyButton.addEventListener('click', () => {
         });
     });
 
-    // Add a delete button inside modify mode
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete Selected';
     deleteButton.addEventListener('click', () => {
@@ -250,20 +101,19 @@ modifyButton.addEventListener('click', () => {
         });
     });
 
-    modifyButton.parentNode.appendChild(deleteButton); //append the delete button after the modify button.
-    modifyButton.style.display = 'none'; // hide the modify button.
+    modifyButton.parentNode.appendChild(deleteButton);
+    modifyButton.style.display = 'none';
 
-    // change the done button to finish modify.
     doneButton.textContent = "Finish Modify";
-    doneButton.removeEventListener('click', doneClick); // remove the old event listener.
-    doneButton.addEventListener('click', finishModify); // add the new event listener.
+    doneButton.removeEventListener('click', doneClick);
+    doneButton.addEventListener('click', finishModify);
 
     function finishModify(){
-        deleteButton.remove(); // remove the delete button.
-        modifyButton.style.display = 'block'; // show the modify button.
+        deleteButton.remove();
+        modifyButton.style.display = 'block';
         doneButton.textContent = "Done!";
-        doneButton.removeEventListener('click', finishModify); // remove the new event listener.
-        doneButton.addEventListener('click', doneClick); // add back the old event listener.
+        doneButton.removeEventListener('click', finishModify);
+        doneButton.addEventListener('click', doneClick);
     }
 });
 
