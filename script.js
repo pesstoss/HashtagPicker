@@ -75,6 +75,9 @@ function toggleClipboardSelected(event) {
     this.classList.toggle('selected');
 }
 
+transferSelectedButton.addEventListener('click', transferSelected);
+transferSelectedButton.addEventListener('touchstart', transferSelected);
+
 function transferSelected() {
     const selectedHashtags = Array.from(hashtagDisplay.querySelectorAll('span.selected'));
     selectedHashtags.forEach(span => {
@@ -89,15 +92,13 @@ function transferSelected() {
     doneButton.style.display = 'block';
 }
 
+transferAllButton.addEventListener('click', transferAll);
+transferAllButton.addEventListener('touchstart', transferAll);
+
 function transferAll() {
     const allHashtags = Array.from(hashtagDisplay.querySelectorAll('span'));
     allHashtags.forEach(span => {
         clipboardDisplay.appendChild(span);
         span.classList.remove('selected');
         span.removeEventListener('click', toggleSelected);
-        span.removeEventListener('touchstart', toggleSelected);
-        span.addEventListener('click', toggleClipboardSelected);
-        span.addEventListener('touchstart', toggleClipboardSelected);
-    });
-    modifyButton.
         
