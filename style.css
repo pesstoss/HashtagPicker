@@ -54,9 +54,9 @@ h1 {
 }
 
 #hashtagDisplay span, #clipboardDisplay span {
-    display: inline-flex; /* Changed to inline-flex */
-    align-items: center; /* Vertically center content */
-    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px; /* Reduced padding */
     margin: 0;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -65,15 +65,15 @@ h1 {
     box-sizing: border-box;
     white-space: nowrap;
     background-color: #fff;
-    max-width: 100%; /* Prevent overflow */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #hashtagDisplay span.selected, #clipboardDisplay span.selected {
     background-color: #e0e0e0;
     border: 1px solid #bbb;
-    padding: 7px 11px;
+    padding: 5px 9px; /* Reduced padding */
 }
 
 .button-container {
