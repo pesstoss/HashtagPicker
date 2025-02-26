@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 span.textContent = displayHashtag;
                 hashtagDisplay.appendChild(span);
 
-                // Add event listeners here, inside the loop
                 span.addEventListener('click', toggleSelected);
                 span.addEventListener('touchstart', toggleSelected);
             });
@@ -94,9 +93,5 @@ document.addEventListener('DOMContentLoaded', function() {
         doneButton.style.display = 'block';
     }
 
-    transferAllButton.addEventListener('click', transferAll);
-    transferAllButton.addEventListener('touchstart', transferAll);
-
-    function transferAll() {
-        const allHashtagsSpans =
-            
+    transferAllButton.addEventListener('click', transferAll
+                                       
