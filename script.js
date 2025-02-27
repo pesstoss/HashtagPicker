@@ -1,14 +1,14 @@
 const hashtags = {
-    general: "#bokehbros #shuttersisters #snap_community_member #podium #pictas #rebels_united #bpa_arts #fotomasters #elitepix #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub",
-    spec1: "#snap_abstract #snap_surreal #snap_communityarts #snap_artgallery #pictasart #snap_textures #snap_minimal #snap_potd #snap_longexposure #snap_depthoffield #snap_nightshots #podium_night #snap_reflection #snap_flatlays",
-    spec2: "#snap_symmetry #snap_silhouette #snap_cuteness #snap_moody #pictasmoody #snap_mobile #snap_macro #podium_macro #rebel_macro #snap_edit snap_filmfoto #snap_colours #snap_colorsplash #snap_ai #snap_numbers",
-    vspec: "#click_dogs #click_machines #click_astro #creepydollsaturday #Sunday_Churches #Sat_door_day #pictasdrone #snap_drone",
-    bnw: "#snap_bnw #snap_allwhite #snap_allblack #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #bnw_bistro #elitepix_mono #monoculture",
-    city: "#snap_cityscape #snap_architecture #snap_lighthouses #snap_abandoned #snap_bridges #snap_transports #snap_homestyle",
-    world: "#snap_world #snap_asia #snap_africa #snap_europe #snap_canada #snap_usa #snap_uk #snap_germany #snap_nordic #snap_ireland #snap_france #snap_india #snap_china #snap_thailand #snap_middleeast #pictastravel",
-    nature: "#snap_foggy #snap_landscape #snap_mountains #snap_country #snap_hikes #snap_skies #snap_gardening #snap_alltrees #snap_flowers #snap_seasons #snap_allnature #snap_beaches #snap_waters #snap_drops #rebel_sky",
+    general: "#bokehbros #shuttersisters #snap_community_member #snap_potd #podium #pictas #rebels_united #bpa_arts #fotomasters #elitepix #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub",
+    art: "#snap_artgallery #snap_communityarts #pictasart #snap_allblack #snap_allwhite #snap_colours #snap_colorsplash #snap_abstract #snap_surreal #snap_edit #snap_minimal #snap_filmfoto #snap_flatlays",
+    spec: "#snap_depthoffield #snap_macro #podium_macro #rebel_macro #snap_longexposure #snap_reflection #snap_symmetry #snap_silhouette #snap_cuteness #snap_moody #pictasmoody #snap_mobile #snap_numbers #snap_textures",
+    vspec: "#click_dogs #click_machines #click_astro #creepydollsaturday #Sunday_Churches #Sat_door_day #pictasdrone #snap_drone #snap_ai #ai_magazine",
+    bnw: "#snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #bnw_bistro #elitepix_mono #monoculture",
+    city: "#snap_cityscape #snap_architecture #snap_abandoned #snap_bridges #snap_transports #snap_lighthouses",
+    world: "#snap_world #snap_asia #snap_china #snap_thailand #snap_india #snap_africa #snap_middleeast #snap_usa #snap_canada #snap_nordic #snap_europe #snap_uk #snap_ireland #snap_germany #snap_france #pictastravel",
+    nature: "#snap_allnature #snap_alltrees #snap_flowers #snap_gardening #snap_landscape #snap_waters #snap_beaches #snap_mountains #snap_country #snap_hikes #snap_seasons #snap_drops #snap_foggy #snap_skies #rebel_sky #snap_nightshots #podium_night",
     fauna: "#snap_wildlife #podium_wildlife #pictasanimals #snap_herpetology #snap_butterflies #snap_oceanlife #snap_insects #snap_horses #snap_fishing #snap_pets #snap_cats #snap_birds #pictasbirds #BIFFeatures",
-    human: "#snap_people #snap_tattoos #snap_street #snap_writings #snap_books #snap_allsports #snap_coffee #snap_kitchen #snap_toys #podium_portraits #podium_street #pictasportrait #pictasstreet #pictasboudoir #pictasfood"
+    human: "#snap_people #podium_portraits #pictasportrait #pictasboudoir #snap_tattoos #snap_street #podium_street #pictasstreet #snap_writings #snap_books #snap_allsports #snap_toys #snap_coffee #snap_kitchen #pictasfood"
 };
 
 const themeSelect = document.getElementById('theme');
