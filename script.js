@@ -5,7 +5,7 @@ const hashtags = {
     spec: "#snap_depthoffield #snap_macro #podium_macro #rebel_macro #snap_longexposure #snap_reflection #snap_symmetry #snap_silhouette #snap_cuteness #snap_moody #pictasmoody #snap_mobile #snap_numbers #snap_textures",
     vspec: "#click_dogs #click_machines #click_astro #creepydollsaturday #Sunday_Churches #Sat_door_day #pictasdrone #snap_drone #snap_ai #ai_magazine",
     city: "#snap_cityscape #snap_architecture #snap_abandoned #snap_bridges #snap_transports #snap_lighthouses",
-    world: "#snap_world #snap_asia #snap_china #snap_thailand #snap_india #snap_africa #snap_middleeast #snap_usa #snap_canada #snap_nordic #snap_europe #snap_uk #snap_ireland #snap_germany #snap_france #pictastravel",
+    world: "#snap_world #snap_asia #snap_china #snap_thailand #snap_india #snap_africa #snap_middleeast #snap_australia #snap_usa #snap_canada #snap_nordic #snap_europe #snap_uk #snap_ireland #snap_germany #snap_france #pictastravel",
     nature: "#snap_allnature #snap_alltrees #snap_flowers #snap_gardening #snap_landscape #snap_waters #snap_beaches #snap_mountains #snap_country #snap_hikes #snap_seasons #snap_drops #snap_foggy #snap_skies #rebel_sky #snap_nightshots #podium_night",
     fauna: "#snap_wildlife #podium_wildlife #pictasanimals #snap_herpetology #snap_butterflies #snap_oceanlife #snap_insects #snap_horses #snap_fishing #snap_pets #snap_cats #snap_birds #pictasbirds #BIFFeatures",
     human: "#snap_people #podium_portraits #pictasportrait #pictasboudoir #snap_tattoos #snap_street #podium_street #pictasstreet #snap_writings #snap_books #snap_allsports #snap_toys #snap_coffee #snap_kitchen #pictasfood"
