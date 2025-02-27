@@ -102,8 +102,8 @@ function copyText() {
 
     if (clipboardText) {
         navigator.clipboard.writeText(clipboardText).then(() => {
-            copyButton.textContent = "Done!";
-            copyButton.onclick = resetAll; // Change the button's action
+            copyButton.textContent = "All Done!"; // Changed the button text
+            copyButton.onclick = resetAndGoHome; // Changed the button's action
         }).catch(err => {
             console.error('Could not copy text: ', err);
             alert('Could not copy text.');
@@ -113,7 +113,7 @@ function copyText() {
     }
 }
 
-function resetAll() {
+function resetAndGoHome() {
     resultDiv.innerHTML = '';
     clipboardDisplay.innerHTML = '';
     copyButton.textContent = "Copy to Clipboard";
@@ -121,6 +121,7 @@ function resetAll() {
     transferSelectedButton.style.display = 'none';
     transferAllButton.style.display = 'none';
     modifyButton.style.display = 'none';
+    themeSelect.value = "empty"; // Reset the theme select to its default value
 }
 
 copyButton.onclick = copyText;
