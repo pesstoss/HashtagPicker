@@ -149,13 +149,15 @@ function copyText() {
 
 function resetAndGoHome() {
     resultDiv.innerHTML = '';
-    clipboardDisplay.innerHTML = '';
+    clipboardDisplay.querySelector('.tab-contents').innerHTML = '';
+    clipboardDisplay.querySelector('.tab-buttons').innerHTML = ''; // Clear tab buttons
     copyButton.textContent = "Copy to Clipboard";
     copyButton.onclick = copyText;
     transferSelectedButton.style.display = 'none';
     transferAllButton.style.display = 'none';
     modifyButton.style.display = 'none';
     themeSelect.value = "empty";
+    activeTab = null; // Reset activeTab
 }
 
 copyButton.onclick = copyText;
