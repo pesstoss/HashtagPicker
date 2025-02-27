@@ -18,6 +18,7 @@ const copyButton = document.getElementById('copyButton');
 const transferSelectedButton = document.getElementById('transferSelectedButton');
 const transferAllButton = document.getElementById('transferAllButton');
 const modifyButton = document.getElementById('modifyButton');
+let activeTab = null;
 
 themeSelect.addEventListener('change', () => {
     const selectedTheme = themeSelect.value;
@@ -42,28 +43,61 @@ function toggleSelected() {
 }
 
 transferSelectedButton.addEventListener('click', () => {
-    const selectedHashtags = Array.from(resultDiv.querySelectorAll('span.selected'));
-    selectedHashtags.forEach(span => {
-        clipboardDisplay.appendChild(span);
-        span.classList.remove('selected');
-        span.removeEventListener('click', toggleSelected);
-        span.addEventListener('click', toggleClipboardSelected);
-    });
-    modifyButton.style.display = 'block';
-    copyButton.style.display = 'block';
+    transferHashtags('selected');
 });
 
 transferAllButton.addEventListener('click', () => {
-    const allHashtags = Array.from(resultDiv.querySelectorAll('span'));
-    allHashtags.forEach(span => {
-        clipboardDisplay.appendChild(span);
-        span.classList.remove('selected');
-        span.removeEventListener('click', toggleSelected);
-        span.addEventListener('click', toggleClipboardSelected);
-    });
-    modifyButton.style.display = 'block';
-    copyButton.style.display = 'block';
+    transferHashtags('all');
 });
+
+function transferHashtags(selectionType) {
+    const selectedTheme = themeSelect.value;
+    let hashtagsToTransfer;
+
+    if (selectionType === 'selected') {
+        hashtagsToTransfer = Array.from(resultDiv.querySelectorAll('span.selected'));
+    } else {
+        hashtagsToTransfer = Array.from(resultDiv.querySelectorAll('span'));
+    }
+
+    if (hashtagsToTransfer.length > 0) {
+        let tabDiv = document.getElementById(`tab-${selectedTheme}`);
+        if (!tabDiv) {
+            createTab(selectedTheme);
+            tabDiv = document.getElementById(`tab-${selectedTheme}`);
+        }
+        hashtagsToTransfer.forEach(span => {
+            tabDiv.appendChild(span);
+            span.classList.remove('selected');
+            span.removeEventListener('click', toggleSelected);
+            span.addEventListener('click', toggleClipboardSelected);
+        });
+        showTab(selectedTheme);
+        modifyButton.style.display = 'block';
+        copyButton.style.display = 'block';
+    }
+}
+
+function createTab(theme) {
+    const tabButton = document.createElement('button');
+    tabButton.textContent = theme.toUpperCase();
+    tabButton.classList.add('tab-button');
+    tabButton.addEventListener('click', () => showTab(theme));
+    clipboardDisplay.querySelector('.tab-buttons').appendChild(tabButton);
+
+    const tabDiv = document.createElement('div');
+    tabDiv.id = `tab-${theme}`;
+    tabDiv.classList.add('tab-content');
+    clipboardDisplay.querySelector('.tab-contents').appendChild(tabDiv);
+}
+
+function showTab(theme) {
+    if (activeTab) {
+        document.getElementById(`tab-${activeTab}`).style.display = 'none';
+    }
+    document.getElementById(`tab-${theme}`).style.display = 'block';
+    activeTab = theme;
+}
 
 modifyButton.addEventListener('click', () => {
     const clipboardSpans = Array.from(clipboardDisplay.querySelectorAll('span'));
@@ -102,8 +136,8 @@ function copyText() {
 
     if (clipboardText) {
         navigator.clipboard.writeText(clipboardText).then(() => {
-            copyButton.textContent = "All Done!"; // Changed the button text
-            copyButton.onclick = resetAndGoHome; // Changed the button's action
+            copyButton.textContent = "All Done!";
+            copyButton.onclick = resetAndGoHome;
         }).catch(err => {
             console.error('Could not copy text: ', err);
             alert('Could not copy text.');
@@ -121,7 +155,10 @@ function resetAndGoHome() {
     transferSelectedButton.style.display = 'none';
     transferAllButton.style.display = 'none';
     modifyButton.style.display = 'none';
-    themeSelect.value = "empty"; // Reset the theme select to its default value
+    themeSelect.value = "empty";
 }
 
 copyButton.onclick = copyText;
+
+// Initial setup for tab areas
+clipboardDisplay.innerHTML = '<div class="tab-buttons"></div><div class="tab-contents"></div>';
