@@ -9,6 +9,29 @@ body {
     box-sizing: border-box;
 }
 
+.infoBalloon {
+    position: absolute;
+    top: 40px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    display: none;
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.infoBalloon::after {
+    content: "";
+    position: absolute;
+    top: -15px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid black;
+}
+
 h1 {
     color: #f7f5f5;
     text-align: center;
