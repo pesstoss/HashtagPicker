@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add click listener to the document to close the balloon
     document.addEventListener('click', function(event) {
         if (infoBalloon && !infoBalloon.contains(event.target) && event.target !== infoButton) {
             infoBalloon.style.display = 'none';
@@ -101,7 +100,6 @@ function transferHashtags(selectionType) {
             }
         });
 
-        // Re-establish event listeners for new elements
         Array.from(tabDiv.querySelectorAll('span')).forEach(span => {
             span.removeEventListener('click', toggleClipboardSelected);
             span.addEventListener('click', toggleClipboardSelected);
@@ -205,5 +203,4 @@ function resetAndGoHome() {
 
 copyButton.onclick = copyText;
 
-// Initial setup for tab areas
 clipboardDisplay.innerHTML = '<div class="tab-buttons"></div><div class="tab-contents"></div>';
