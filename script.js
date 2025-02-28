@@ -92,11 +92,11 @@ function transferHashtags(selectionType) {
         copyButton.style.display = 'block';
 
         if (newHashtags.length > 0 && duplicateHashtags.length > 0) {
-            alert("New items added, existing ignored!");
+            alert("Existing ignored!");
         } else if (newHashtags.length > 0 && duplicateHashtags.length === 0) {
             // No message for only new items added
         } else if (newHashtags.length === 0) {
-            alert("Items already added!");
+            alert("Already added!");
         }
     }
 }
