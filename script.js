@@ -38,6 +38,26 @@ themeSelect.addEventListener('change', () => {
     transferAllButton.style.display = hashtagString ? 'block' : 'none';
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const infoButton = document.getElementById('infoButton');
+    const infoBalloon = document.getElementById('infoBalloon');
+
+    infoButton.addEventListener('click', function() {
+        if (infoBalloon.style.display === 'none' || infoBalloon.style.display === '') {
+            infoBalloon.style.display = 'block';
+        } else {
+            infoBalloon.style.display = 'none';
+        }
+    });
+
+    // Add click listener to the document to close the balloon
+    document.addEventListener('click', function(event) {
+        if (infoBalloon && !infoBalloon.contains(event.target) && event.target !== infoButton) {
+            infoBalloon.style.display = 'none';
+        }
+    });
+});
+
 function toggleSelected() {
     this.classList.toggle('selected');
 }
