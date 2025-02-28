@@ -66,15 +66,38 @@ function transferHashtags(selectionType) {
             createTab(selectedTheme);
             tabDiv = document.getElementById(`tab-${selectedTheme}`);
         }
+
+        const existingClipboardHashtags = Array.from(tabDiv.querySelectorAll('span')).map(span => span.textContent);
+        const newHashtags = [];
+        const duplicateHashtags = [];
+
         hashtagsToTransfer.forEach(span => {
-            tabDiv.appendChild(span);
-            span.classList.remove('selected');
-            span.removeEventListener('click', toggleSelected);
+            if (!existingClipboardHashtags.includes(span.textContent)) {
+                const clonedSpan = span.cloneNode(true);
+                tabDiv.appendChild(clonedSpan);
+                newHashtags.push(span.textContent);
+            } else {
+                duplicateHashtags.push(span.textContent);
+            }
+        });
+
+        // Re-establish event listeners for new elements
+        Array.from(tabDiv.querySelectorAll('span')).forEach(span => {
+            span.removeEventListener('click', toggleClipboardSelected);
             span.addEventListener('click', toggleClipboardSelected);
         });
+
         showTab(selectedTheme);
         modifyButton.style.display = 'block';
         copyButton.style.display = 'block';
+
+        if (newHashtags.length > 0 && duplicateHashtags.length > 0) {
+            alert("New items added, existing ignored!");
+        } else if (newHashtags.length > 0 && duplicateHashtags.length === 0) {
+            // No message for only new items added
+        } else if (newHashtags.length === 0) {
+            alert("Items already added!");
+        }
     }
 }
 
