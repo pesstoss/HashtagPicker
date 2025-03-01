@@ -7,7 +7,7 @@ const hashtags = {
     city: "#snap_cityscape #snap_architecture #snap_street #podium_street #pictasstreet #snap_abandoned #snap_bridges #snap_transports #snap_lighthouses",
     world: "#snap_world #snap_asia #snap_china #snap_thailand #snap_india #snap_africa #snap_middleeast #snap_australia #snap_usa #snap_canada #snap_nordic #snap_europe #snap_uk #snap_ireland #snap_germany #snap_france #pictastravel",
     nature: "#snap_allnature #snap_alltrees #snap_flowers #snap_gardening #snap_landscape #snap_waters #snap_beaches #snap_mountains #snap_country #snap_hikes #snap_seasons #snap_drops #snap_foggy #snap_skies #rebel_sky #snap_nightshots #podium_night",
-    fauna: "#snap_wildlife #podium_wildlife #pictasanimals #snap_herpetology #snap_butterflies #snap_oceanlife #snap_insects #snap_horses #snap_fishing #snap_pets #click_dogs #snap_cats #snap_birds #pictasbirds #BIFFeatures",
+    fauna: "#snap_wildlife #podium_wildlife #pictasanimals #snap_herpetology #snap_butterflies #snap_oceanlife #snap_insects #snap_horses #snap_fishing #snap_pets #click_dogs #snap_cats #snap_birds #pictasbirds #BIFFeatures #twowa",
     human: "#snap_people #podium_portraits #pictasportrait #pictasboudoir #snap_tattoos #snap_writings #snap_books #snap_allsports #snap_toys #snap_coffee #snap_kitchen #pictasfood"
 };
 
