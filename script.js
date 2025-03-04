@@ -1,7 +1,7 @@
 const hashtags = {
     general: "#shuttersisters #bokehbros #snap_community_member #snap_potd #podium #pictas #rebels_united #fotomasters #elitepix #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub",
     bnw: "#bnw_bistro #snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #elitepix_mono #monoculture",
-    art: "#snap_artgallery #snap_communityarts #bpa_arts #pictasart #snap_allblack #snap_allwhite #snap_colours #snap_colorsplash #snap_abstract #snap_surreal #snap_edit #snap_minimal #snap_filmfoto #snap_flatlays",
+    art: "#snap_artgallery #snap_communityarts #bpa_arts #pictasart #snap_allblack #snap_allwhite #snap_colours #snap_colorsplash #snap_abstract #snap_surreal #snap_edit #snap_minimal #snap_filmfoto #snap_flatlays #ArtWithoutBorders",
     genre: "#snap_macro #podium_macro #rebel_macro #snap_moody #pictasmoody #snap_mobile #snap_numbers #snap_textures #snap_symmetry #snap_silhouette #snap_reflection #snap_depthoffield #snap_longexposure",
     spec: "#click_machines #click_astro #snap_ai #ai_magazine #snap_drone #pictasdrone #snap_cuteness #creepydollsaturday #Sunday_Churches #Sat_door_day",
     city: "#snap_cityscape #snap_architecture #snap_street #podium_street #pictasstreet #snap_abandoned #snap_bridges #snap_transports #snap_lighthouses",
