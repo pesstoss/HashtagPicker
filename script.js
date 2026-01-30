@@ -1,13 +1,13 @@
 const hashtags = {
-    general: "#shuttersisters #bokehbros #snap_community_member #snap_potd #podium #pictas #rebels_united #fotomasters #elitepix #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub #shutter_stories #fair_ypic #visionaryimages",
-    bnw: "#BNWbistro #snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #elitepix_mono #monoculture #bnw_chapel",
+    general: "#shuttersisters #snap_community_member #snap_potd #podium #pictas #rebels_united #fotomasters #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub #shutter_stories #visionaryimages",
+    bnw: "#BNWbistro #snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #monoculture #bnw_chapel",
     art: "#snap_artgallery #snap_communityarts #bpa_arts #pictasart #snap_allblack #snap_allwhite #snap_colours #snap_colorsplash #snap_abstract #seeing_abstract #snap_surreal #snap_edit #snap_minimal #snap_filmfoto #snap_flatlays #ArtWithoutBorders #art_to_share #sundayeveningart",
     genre: "#snap_macro #podium_macro #rebel_macro #pictasmacro #snap_moody #pictasmoody #snap_mobile #snap_numbers #snap_textures #snap_symmetry #snap_silhouette #snap_reflection #snap_depthoffield #snap_longexposure",
-    spec: "#click_machines #click_astro #snap_ai #ai_magazine #snap_drone #pictasdrone #snap_cuteness #creepydollsaturday #Sunday_Churches #Sat_door_day",
+    spec: "#snap_ai #ai_magazine #pictasdrone #snap_cuteness #creepydollsaturday #Sunday_Churches #Sat_door_day",
     city: "#snap_cityscape #snap_architecture #snap_homestyle #snap_street #podium_street #pictasstreet #snap_abandoned #snap_bridges #snap_transports #snap_lighthouses",
-    world: "#snap_world #snap_asia #snap_china #snap_thailand #snap_india #snap_africa #snap_middleeast #snap_australia #snap_usa #snap_canada #snap_nordic #snap_europe #snap_uk #snap_ireland #snap_germany #snap_france #pictastravel",
-    nature: "#snap_allnature #pictasnature #snap_alltrees #snap_flowers #World_of_Wild_Flowers #snap_gardening #snap_landscape #snap_waters #snap_beaches #snap_mountains #snap_country #snap_hikes #snap_seasons #snap_drops #snap_foggy #snap_skies #rebel_sky #snap_nightshots #podium_night #fairytale_nature_moments",
-    animal: "#snap_wildlife #podium_wildlife #twowa #pictasanimals #snap_herpetology #snap_butterflies #snap_oceanlife #snap_insects #snap_horses #snap_fishing #snap_allpets #click_dogs #snap_cats #snap_birds #pictasbirds #BIFFeatures #birdworld",
+    world: "#snap_world #snap_asia #snap_middleeast #snap_australia #snap_usa #snap_canada #snap_nordic #snap_uk #snap_ireland #snap_germany #pictastravel",
+    nature: "#snap_allnature #pictasnature #snap_alltrees #snap_flowers #WOWF #snap_gardening #snap_landscape #snap_waters #snap_beaches #snap_mountains #snap_country #snap_hikes #snap_seasons #snap_drops #snap_foggy #snap_skies #rebel_sky #snap_nightshots #podium_night #fairytale_nature_moments",
+    animal: "#snap_wildlife #podium_wildlife #twowa #pictasanimals #snap_herpetology #snap_butterflies #snap_oceanlife #snap_insects #snap_horses #snap_fishing #snap_allpets #snap_birds #pictasbirds #BIFFeatures #birdworld",
     human: "#snap_people #podium_portraits #pictasportrait #pictasboudoir #snap_tattoos #snap_writings #snap_books #snap_allsports #snap_toys #snap_coffee #snap_kitchen #pictasfood"
 };
 
