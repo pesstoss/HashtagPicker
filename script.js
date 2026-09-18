@@ -1,5 +1,5 @@
 const hashtags = {
-    general: "#shuttersisters #snap_community_member #snap_potd #podium #pictas #rebels_united #fotomasters #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub #shutter_stories #visionaryimages #photography_hub",
+    general: "#shuttersisters #snap_community_member #snap_potd #podium #pictas #rebels_united #fotomasters #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub #shutter_stories #visionaryimages #photography_hub #photoworld5",
     bnw: "#BNWbistro #snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #monoculture #bnw_chapel",
     art: "#snap_artgallery #snap_communityarts #bpa_arts #pictasart #snap_allblack #snap_allwhite #snap_colours #snap_colorsplash #snap_abstract #seeing_abstract #snap_surreal #snap_process #snap_minimal #snap_flatlays #universalarthub",
     genre: "#snap_macro #podium_macro #rebel_macro #pictasmacro #snap_moody #pictasmoody #snap_mobile #snap_numbers #snap_textures #snap_symmetry #snap_silhouette #snap_reflection #snap_depthoffield #snap_longexposure",
