@@ -3,7 +3,7 @@ const hashtags = {
     bnw: "#BNWbistro #snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #monoculture #bnw_chapel",
     art: "#snap_artgallery #snap_communityarts #bpa_arts #pictasart #snap_allblack #snap_allwhite #snap_colours #snap_colorsplash #snap_abstract #seeing_abstract #snap_surreal #snap_process #snap_minimal #snap_flatlays #universalarthub",
     genre: "#snap_macro #podium_macro #rebel_macro #pictasmacro #snap_moody #pictasmoody #snap_mobile #snap_numbers #snap_textures #snap_symmetry #snap_silhouette #snap_reflection #snap_depthoffield #snap_longexposure",
-    spec: "#snap_ai #ai_magazine #pictasdrone #snap_cuteness #creepydollsaturday #Sunday_Churches #Sat_door_day",
+    spec: "#snap_ai #ai_magazine #pictasdrone #snap_cuteness #creepydollsaturday #Sunday_Churches #Sat_door_day pictasstorytelling",
     city: "#snap_cityscape #snap_architecture #snap_homestyle #snap_street #podium_street #pictasstreet #snap_abandoned #snap_bridges #snap_transports #snap_lighthouses",
     world: "#snap_world #snap_asia #snap_middleeast #snap_australia #snap_usa #snap_canada #snap_nordic #snap_uk #snap_ireland #snap_germany #pictastravel",
     nature: "#snap_allnature #pictasnature #snap_alltrees #snap_flowers #WOWF #snap_gardening #snap_landscape #snap_waters #snap_beaches #snap_mountains #snap_country #snap_hikes #snap_seasons #snap_drops #snap_foggy #snap_skies #rebel_sky #snap_nightshots #podium_night #fairytale_nature_moments",
