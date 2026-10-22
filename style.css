@@ -1,6 +1,7 @@
 body {
-    font-family: 'Helvetica Neue';
-    background-color: #6cc7e6;
+    font-family: system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+    background-color: #1e293b;
+    color: #f8fafc;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,16 +11,18 @@ body {
 }
 
 .infoBalloon {
-    position: absolute;
-    top: 40px;
-    right: 10px;
+    position: fixed; /* Anchors it to the screen viewport */
+    top: 60px; /* Positions it nicely below your 40px info button */
+    right: 10px; /* Snaps it to the right edge */
     display: none;
-    background-color: white;
-    border: 2px solid black;
+    background-color: white; /* Restores the white background */
+    color: #6366f1 !important;
+    border: 2px solid #6366f1;
     padding: 10px;
     border-radius: 10px;
     width: 200px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensures it stays on top of the other elements */
 }
 
 .infoBalloon::after {
@@ -27,13 +30,16 @@ body {
     position: absolute;
     top: -15px;
     right: 20px;
+    .infoBalloon, .infoBalloon * {
+    color: #6366f1 !important;
+}
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 15px solid black;
+    border-bottom: 15px solid #6366f1;
 }
 
 h1 {
-    color: #f7f5f5;
+    color: #f8fafc;
     text-align: center;
     margin-bottom: 60px;
     width: 100%;
@@ -49,16 +55,17 @@ h1 {
 }
 
 .hashtag-box {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: none;
+    padding: 20px;
     margin: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 12px;
+    background-color: #334155;
     min-height: 150px;
     width: 95%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -68,53 +75,82 @@ h1 {
 }
 
 #result span, #clipboardDisplay span {
-    overflow-y: auto;
-    padding: 8px 12px;
-    margin: 2px;
-    font-size: 16px;
-}
-
-#result span, #clipboardDisplay span {
     display: inline-flex;
     align-items: center;
-    padding: 6px 10px;
-    margin: 2px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
     text-align: center;
     box-sizing: border-box;
     white-space: nowrap;
-    background-color: #fff;
+    background-color: #475569;
+    color: #f8fafc;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     flex-wrap: wrap;
+    transition: background 0.2s ease;
+}
+
+#result span:hover, #clipboardDisplay span:hover {
+    background-color: #64748b;
 }
 
 #result span.selected, #clipboardDisplay span.selected {
-    background-color: #e0e0e0;
-    border: 1px solid #bbb;
-    padding: 5px 9px;
+    background-color: #10b981; /* Emerald green for selected state */
+    color: white;
+    border: none;
 }
 
 .button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 15px;
     gap: 15px;
 }
 
 .copy-button, button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
     padding: 10px 15px;
     font-size: 16px;
+    font-weight: bold;
     flex-grow: 1;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
 }
 
 .copy-button:hover, button:hover {
-    background-color: #82deee;
+    background-color: #4f46e5;
 }
 
-select#theme{
-    min-height:35px;
+.copy-button:active, button:active {
+    transform: scale(0.98);
+}
+
+select#theme {
+    min-height: 35px;
+    background-color: #475569;
+    color: #f8fafc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    /* 1. Add extra padding on the right so text doesn't overlap the new arrow */
+    padding: 5px 35px 5px 10px;
+    
+    /* 2. Hide the default browser arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* 3. Add our custom indigo purple (#6366f1) arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
 }
