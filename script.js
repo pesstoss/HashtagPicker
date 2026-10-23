@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+
 const hashtags = {
     general: "#shuttersisters #snap_community_member #snap_potd #podium #pictas #rebels_united #fotomasters #picplanet #exquisitepics20 #hey_ihadtosnapthat2 #imagehub #shutter_stories #visionaryimages #photography_hub #photoworld5",
     bnw: "#BNWbistro #snap_bnw #podium_mono #monomoods_photography #monomoods_street #rebel_bnw #pictasmonochrome #monoculture #bnw_chapel",
