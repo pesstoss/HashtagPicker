@@ -133,6 +133,7 @@ h1 {
     padding: 10px 15px;
     font-size: 16px;
     font-weight: bold;
+    width: max-content;
     flex-grow: 1;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s ease;
@@ -153,6 +154,7 @@ select#theme {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    width: max-content;
     
     /* 1. Add extra padding on the right so text doesn't overlap the new arrow */
     padding: 5px 35px 5px 10px;
