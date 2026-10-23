@@ -1,3 +1,17 @@
+/* Hide browser-specific navigation if the app is installed */
+@media all and (display-mode: standalone) {
+  .browser-back-button {
+    display: none;
+  }
+}
+
+/* Prevent text highlighting and iOS callout menus to feel like a native app */
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Safari */
+  user-select: none;           /* Standard syntax */
+}
+
 body {
     font-family: system-ui, -apple-system, 'Helvetica Neue', sans-serif;
     background-color: #1e293b;
