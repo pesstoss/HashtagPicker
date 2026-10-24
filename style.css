@@ -134,6 +134,7 @@ h1 {
     font-size: 16px;
     font-weight: bold;
     width: max-content;
+    align-self: center;
     flex-grow: 1;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s ease;
