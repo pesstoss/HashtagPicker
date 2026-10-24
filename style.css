@@ -135,6 +135,7 @@ h1 {
     font-weight: bold;
     width: max-content;
     align-self: center;
+    margin: 0 auto;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s ease;
 }
